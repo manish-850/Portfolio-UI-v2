@@ -1,0 +1,25 @@
+.bgr{
+    background-color: red;
+}
+.bgb{
+    background-color: blue;
+}
+.bgg{
+    background-color: green;
+}
+.bgy{
+    background-color: yellow;
+}
+
+.bdr{
+    border:1px solid red;
+}
+.bdb{
+    border:1px solid blue;
+}
+.bdg{
+    border:1px solid green;
+}
+.bdy{
+    border:1px solid yellow;
+}

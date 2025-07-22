@@ -8,13 +8,15 @@
 
 }
 
-html, body {
+html,
+body {
     margin: 0 !important;
     padding: 0 !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -71,6 +73,8 @@ html::selection {
     width: 60%;
     margin-left: 10px;
 }
+
+/* done */
 
 #nav ul {
     display: flex;
@@ -151,10 +155,10 @@ html::selection {
     height: auto;
     width: auto;
     padding: 10px 15px;
-    border: 1px solid white;
-    border-radius: 8px;
-    color: white;
-    background-color: var(--color1);
+    border: 2px solid var(--color1);
+    border-radius: 20px;
+    color: var(--color1);
+    background-color: white;
     box-shadow: 5px 5px var(--grey);
     transition: all 0.5s ease-in-out;
 }
@@ -162,6 +166,8 @@ html::selection {
 .btn:hover {
     transform: scale(1.2);
     cursor: pointer;
+    color: white;
+    background-color: var(--color1);
 }
 
 .btn:active {
@@ -175,6 +181,7 @@ html::selection {
     display: flex;
     height: 80%;
     width: 100%;
+    padding: 50px 0px;
 }
 
 #left-content {
@@ -193,7 +200,7 @@ html::selection {
     height: auto;
     background-color: var(--color1);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    border: 5px solid var(--color1);
+    border: 5px solid var(--color2);
     transition: all 0.5s ease-in-out;
 
 }
@@ -234,91 +241,16 @@ html::selection {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 25%;
+    height: auto;
 }
 
 #h-content h1 {
     text-align: left;
     margin-left: 10px;
-    height: 50%;
 }
 
 h1 span {
     color: var(--color1);
-}
-
-#animated-text {
-    height: 50%;
-    display: flex;
-    align-items: center;
-}
-
-#animated-text p {
-    width: auto;
-    height: 100%;
-    font-size: 30px;
-    margin-right: 5px;
-    margin-left: 10px;
-    text-align: left;
-}
-
-#roles {
-    width: auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#list {
-    margin-left: 10px;
-    height: 68%;
-    display: block;
-    transform: translateX(-100);
-    overflow: hidden;
-
-}
-
-#list div {
-    color: var(--color1);
-    text-align: center;
-    font-size: 30px;
-    margin-top: -2px;
-    animation: list-change 4s infinite;
-}
-
-@keyframes list-change {
-    10% {
-        transform: translateY(-102%);
-    }
-
-    25% {
-        transform: translateY(-100%);
-    }
-
-    35% {
-        transform: translateY(-202%);
-    }
-
-    50% {
-        transform: translateY(-200%);
-    }
-
-    60% {
-        transform: translateY(-302%);
-    }
-
-    75% {
-        transform: translateY(-300%);
-    }
-
-    85% {
-        transform: translateY(-402%);
-    }
-
-    100% {
-        transform: translateY(-400%);
-    }
 }
 
 #body-text {
@@ -433,7 +365,8 @@ h1 span {
 }
 
 .s-card {
-    height: 80%;
+    height: auto;
+    padding: 30px 0;
     width: 20%;
     box-shadow: 5px 5px var(--color2);
     color: #000000;
@@ -530,8 +463,9 @@ h1 span {
 }
 
 .p-card {
-    height: 70%;
+    height: auto;
     width: 20%;
+    padding-bottom: 10px;
     box-shadow: 5px 5px var(--color2);
     border-radius: 68% 32% 67% 33% / 47% 55% 45% 53%;
     color: #000000;
@@ -822,4 +756,206 @@ h1 span {
     height: auto;
     display: inline;
     margin-left: 26px;
+}
+
+@media (max-width: 425px) {
+    #nav {
+        display: none;
+    }
+
+    #logo {
+        width: 50vw;
+    }
+
+    #logo-text {
+        width: auto;
+        margin-left: 40px;
+    }
+
+    #hirebtn {
+        width: 50vw;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100vw;
+        margin-top: 0px;
+    }
+
+    #left-content {
+        height: 30vh;
+        width: 35vw;
+        margin-left: 45px;
+    }
+
+    #main-img img {
+        width: 35vw;
+    }
+
+    #right-content {
+        width: 100vw;
+        min-height: 70vh;
+    }
+
+    #heading {
+        width: 40vw;
+        height: auto;
+        position: relative;
+        top: -150px;
+        right: -215px;
+        overflow: hidden;
+    }
+    #heading #animated-text{
+        display: none;
+    }
+    #heading #h-content h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    #body-text {
+        width: 90vw;
+    }
+
+    #body-text p {
+        margin-top: -80px;
+        margin-left: 40px;
+    }
+
+    #button {
+        width: 100vw;
+        height: 20vh;
+        margin-left: 0;
+    }
+
+    #dnbtn {
+        margin: auto;
+        width: 80vw;
+        height: 10vh;
+        border-radius: 100px;
+    }
+
+    #sm {
+        width: auto;
+        height: 10vh;
+        margin-left: 60px;
+
+    }
+
+    .icon {
+        scale: 1.5;
+
+    }
+
+    #icon1 {
+        margin-left: 0px;
+    }
+
+    #icon2 {
+        margin-left: 0px;
+    }
+
+    #icon3 {
+        margin-left: 0px;
+    }
+
+    #icon4 {
+        margin-left: 0px;
+    }
+
+    #Services {
+        margin-top: 300px;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    #services-card {
+        flex-direction: column;
+        min-height: 260vh;
+        width: 100vw;
+        justify-items: center;
+    }
+
+    .s-card {
+        height: 50vh;
+        width: 70vw;
+        margin: auto;
+    }
+
+    #project {
+        margin-top: 170vh;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    #project-card {
+        flex-direction: column;
+        min-height: 260vh;
+        width: 100vw;
+        justify-items: center;
+    }
+
+    .p-card {
+        height: 50vh;
+        width: 70vw;
+        margin: auto;
+    }
+
+    #myskills {
+        margin-top: 185vh;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    #skill-content {
+        width: 100vw;
+        height: 200vh;
+    }
+
+    #row1 {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    #row2 {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .skill-container {
+        margin: auto;
+        height: 100px;
+        width: 80vw;
+    }
+
+    #reviews {
+        margin-top: 115vh;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    #reviews-heading {
+        width: 100vw;
+    }
+
+    #reviews-heading h1 {
+        margin: auto;
+        text-align: center;
+    }
+
+    #reviews-content {
+        width: 100vw;
+        height: 250vh;
+        flex-direction: column;
+    }
+
+    .reviews-card {
+        width: 80vw;
+        height: 40vh;
+    }
 }

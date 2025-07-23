@@ -25,7 +25,6 @@ body::-webkit-scrollbar {
     --color2: #badde7;
     --color3: rgb(255, 255, 255);
     --color4: rgb(0, 0, 0);
-
     --grey: #e7e7e7;
 }
 
@@ -40,8 +39,12 @@ html::selection {
     width: 100%;
     align-items: center;
     position: fixed;
-    background-color: var(--color3);
+    background-color: white;
     z-index: 1;
+}
+
+#header i {
+    display: none;
 }
 
 .fakeheader {
@@ -769,28 +772,138 @@ h1 span {
     margin-left: 26px;
 }
 
+
+#form-box {
+    display: none;
+    z-index: 99;
+    background-color: white;
+    position: fixed;
+    height: auto;
+    width: 24vw;
+    top: 25vh;
+    right: 10vw;
+    padding: 1vw;
+    border-radius: 40px;
+}
+
+#form-box fieldset {
+    border: none;
+}
+
+#form-box label {
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+#form-box input {
+    padding: 0 1vw;
+    margin: 1vh 0;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--grey);
+    height: 40px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+#form-box .form-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--color1);
+    color: white;
+}
+
+#form-box #closebtn {
+    position: relative;
+    right: -280px;
+    cursor: pointer;
+}
+
+.form-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: none;
+}
+
 @media (max-width: 600px) {
-    #header{
+    #header {
         height: 10vh;
     }
-    #fakeheader{
+
+    #header i {
+        height: auto;
+        width: auto;
+        display: block;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    #fakeheader {
         height: 10vh;
     }
+
     #nav {
         display: none;
     }
 
+    #nav-phone {
+        position: fixed;
+        background-color: white;
+        z-index: 99;
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav-phone ul{
+        margin-top: 10vh;
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #nav-phone ul li{
+        list-style: none;
+        height: auto;
+        width: auto;
+    }
+    #nav-phone ul li a{
+        text-decoration: none;
+        height: auto;
+        width: auto;
+    }
+    #nav-phone ul li a h4{
+        color: black;
+        font-size: 30px;
+    }
+    #nav-phone h1{
+        position: absolute;
+        top: 25px;
+        right: -85vw;
+        
+    }
     #logo {
-        width: 50vw;
+        margin: 0;
+        margin-right: 20px;
+        width: 40vw;
     }
 
     #logo-text {
         width: auto;
         margin-left: 40px;
+        font-size: 15px;
     }
 
     #hirebtn {
-        width: 50vw;
+        width: 40vw;
+        margin: 0;
     }
 
     #content {
@@ -824,7 +937,8 @@ h1 span {
         right: -215px;
         overflow: hidden;
     }
-    #heading #h-content h1{
+
+    #heading #h-content h1 {
         text-align: center;
         font-size: 40px;
     }
@@ -881,7 +995,7 @@ h1 span {
     }
 
     #Services {
-        margin-top: 70px;
+        margin-top: 100px;
         min-height: 100vh;
         width: 100vw;
     }
@@ -973,5 +1087,15 @@ h1 span {
         /* margin-top: -10vw; */
         width: 80vw;
         height: 30vh;
+    }
+
+    #form-box {
+        padding: 4vh 10vw;
+        width: 90vw;
+        right: 5vw;
+    }
+
+    #form-box #closebtn {
+        top: 15px;
     }
 }
